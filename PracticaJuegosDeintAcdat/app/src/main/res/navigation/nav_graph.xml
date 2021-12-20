@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="org.izv.omc.practicajuegosdeintacdat.view.activity.Main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_createGame"
+            app:destination="@id/createGame" />
+        <action
+            android:id="@+id/action_main_to_createCategory"
+            app:destination="@id/createCategory" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGame"
+        android:name="org.izv.omc.practicajuegosdeintacdat.view.activity.createGame"
+        android:label="fragment_create_game"
+        tools:layout="@layout/fragment_create_game" >
+        <action
+            android:id="@+id/action_createGame_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCategory"
+        android:name="org.izv.omc.practicajuegosdeintacdat.view.activity.CreateCategory"
+        android:label="fragment_create_category"
+        tools:layout="@layout/fragment_create_category" >
+        <action
+            android:id="@+id/action_createCategory_to_main"
+            app:destination="@id/main" />
+    </fragment>
+</navigation>
